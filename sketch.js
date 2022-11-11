@@ -101,7 +101,7 @@ class SongNode extends Node {
   }
 
   loadImg(){
-    let imgPath = `data/resized_images/${this.id}.jpg`
+    let imgPath = `spotify-graph-explorer/data/resized_images/${this.id}.jpg`
     loadImage(imgPath, img => {
       this.img = img
     })
@@ -165,7 +165,7 @@ class SongNode extends Node {
       playingClip.stop()
     }
     soundFormats('mp3');
-    loadSound(`data/clips/${this.id}.mp3`, sound => {
+    loadSound(`spotify-graph-explorer/data/clips/${this.id}.mp3`, sound => {
       if (sound)
         this.clip = sound
         playingClip = sound
@@ -524,8 +524,8 @@ var mouseOverHelp = false
 //var graphJson, songsJson, playlistsJson
 
 async function preload() {
-  playIcon = loadImage("icons/play-button-arrowhead.png")
-  linkIcon = loadImage("icons/link.png")
+  playIcon = loadImage("spotify-graph-explorer/icons/play-button-arrowhead.png")
+  linkIcon = loadImage("spotify-graph-explorer/icons/link.png")
 }
 
 async function setup() {
@@ -536,9 +536,9 @@ async function setup() {
   helpWindow.addEventListener("mouseout", () => {mouseOverHelp = false})
   helpWindow.addEventListener("click", () => {helpWindow.classList.toggle("opened")})
   
-  const graphJson = await fetchJson("./data/graph.json")
-  const songsJson = await fetchJson("./data/tracks.json")
-  const playlistsJson = await fetchJson("./data/collections.json")
+  const graphJson = await fetchJson("./spotify-graph-explorer/data/graph.json")
+  const songsJson = await fetchJson("./spotify-graph-explorer/data/tracks.json")
+  const playlistsJson = await fetchJson("./spotify-graph-explorer/data/collections.json")
  
 
   g = new Graph(graphJson, songsJson, playlistsJson, null)
