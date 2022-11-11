@@ -1,5 +1,7 @@
 # Odkrivanje glasbe preko interaktivnega sprehajanja po grafu Spotify seznamov predvajanj.
 
+![screenshot](preview.png)
+
 ## Vprašanje
 Cilj seminarske naloge je bil vizualizirati podatkovno množico seznamov predvajanja na platformi Spotify. Orodje za interaktivno raziskovanje te množice - bipartidnega grafa povezanosti pesmi v sezname predvajanja - bi uporabniku lahko dalo intuitiven vpogled v to, kako ostali uporabniki kategorizirajo glasbo in s tem ponudilo nov način odkrivanja glasbe.
 
